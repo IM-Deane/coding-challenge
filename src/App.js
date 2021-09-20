@@ -5,10 +5,6 @@ import SearchBar from "./components/SearchBar/SearchBar";
 
 import CandidateData from "./data/candidates.json";
 
-console.log(CandidateData);
-
-// Get Candidate
-
 function App() {
 	const [candidates, setCandidates] = useState(CandidateData.results);
 	const [searchQuery, setSearchQuery] = useState("");
