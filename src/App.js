@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import CandidateTable from "./components/CandidateTable";
+import CandidateTable from "./components/CandidateTable/CandidateTable";
 import SearchBar from "./components/SearchBar/SearchBar";
 
 import CandidateData from "./data/candidates.json";

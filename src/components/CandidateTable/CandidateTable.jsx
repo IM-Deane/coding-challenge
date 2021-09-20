@@ -1,6 +1,10 @@
 import React from "react";
 
-import Candidate from "./Candidate/Candidate.jsx";
+import { DownCaret } from "../../ui-kit/icons/index.js";
+
+import "./CandidateTable.styles.css";
+
+import Candidate from "../Candidate/Candidate.jsx";
 
 function CandidateTable({ candidates }) {
 	return (
@@ -15,18 +19,25 @@ function CandidateTable({ candidates }) {
 			>
 				<div>
 					<input type="checkbox" />
+					<DownCaret className="down-caret" />
 				</div>
 				<div>
-					<h3>Candidate Name</h3>
+					<p>
+						Candidate Name <DownCaret className="down-caret" />
+					</p>
 				</div>
 				<div>
-					<h3>Status</h3>
+					<p>Status</p>
 				</div>
 				<div>
-					<h3># Apps</h3>
+					<p>
+						# Apps <DownCaret className="down-caret" />
+					</p>
 				</div>
 				<div>
-					<h3>Last Action</h3>
+					<p>
+						Last Action <DownCaret className="down-caret" />
+					</p>
 				</div>
 			</header>
 			<section style={{ borderBottom: "1px solid black" }}>
