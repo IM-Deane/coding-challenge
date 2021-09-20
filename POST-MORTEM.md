@@ -5,7 +5,7 @@
 ## Project Overview
 
 The current state of the application meets most of the basic requirements
-outlined in the specification. Currently, the application provides the user with
+outlined in the specification. Currently, it provides the user with
 three main functions:
 
 1. The user can click any candidate row and view a list of their current
@@ -20,7 +20,7 @@ three main functions:
 3. I've included a search feature that let's the user filter the list of
    candidates by their name or email address.
 
-## Design decisions & Tradeoffs:
+## Design Decisions & Tradeoffs:
 
 Given the time constraint, I knew that I wouldn't be able to implement
 everything depicted in the project screenshots.
