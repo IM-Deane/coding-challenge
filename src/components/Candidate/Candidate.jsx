@@ -5,6 +5,11 @@ import { Modal } from "../../ui-kit/index.js";
 import "./Candidate.styles.css";
 import { roleStatuses, colorMapping } from "../../utils/enums";
 
+import { MinusSign } from "../../ui-kit/icons/index.js";
+import { PlusSign } from "../../ui-kit/icons/index.js";
+import { RightCaret } from "../../ui-kit/icons/index.js";
+import { ScorecardIcon } from "../../ui-kit/icons/index.js";
+
 import moment from "moment";
 
 function Candidate({ candidate }) {
@@ -53,12 +58,11 @@ function Candidate({ candidate }) {
 					<p>{moment().from(candidate.updated)}</p>
 				</div>
 				<div>
-					<button
-						className="toggle-button"
-						onClick={handleCandidateApplications}
-					>
-						{openAppList ? "-" : "+"}
-					</button>
+					{openAppList ? (
+						<MinusSign onClick={handleCandidateApplications} />
+					) : (
+						<PlusSign onClick={handleCandidateApplications} />
+					)}
 				</div>
 			</div>
 			{/* Candidate applications */}
@@ -76,7 +80,7 @@ function Candidate({ candidate }) {
 								onClick={openModal}
 								style={{ flexShrink: 1, justifySelf: "end" }}
 							>
-								{modal ? " ^ " : " > "}
+								<RightCaret />
 							</div>
 							<Modal.Modal isOpen={modal} onClose={closeModal}>
 								<Modal.Title>{app.role.title}</Modal.Title>
